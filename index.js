@@ -11,7 +11,7 @@ function lowerCaseDrivers(drivers) {
   const newDriver = map(drivers, function(driver) {
     driver.toLowerCase();
   });
-  console.log(newDriver)
+  console.log(newDriver);
   return newDriver;
 }
 
