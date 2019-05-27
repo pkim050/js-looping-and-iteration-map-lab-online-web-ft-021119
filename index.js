@@ -1,29 +1,15 @@
 // Code your solution in this file.
 function lowerCaseDrivers(drivers) {
-  const newDriver = drivers.map(function(driver) {
-    driver.toLowerCase();
-  });
+  const newDriver = drivers.map(driver => driver.toLowerCase());
   return newDriver;
 }
 
 function nameToAttributes(drivers) {
-  const newDriver = [];
-  for (const driver of drivers) {
-    let temp = driver.split(" ");
-    let firstName = temp[0];
-    let lastName = temp[1];
-    newDriver.push({"firstName": firstName, "lastName": lastName});
-  }
+  const newDriver = drivers.map(driver => Object.assign({}, {firstName: driver.split(" ")[0], lastName: driver.split(" ")[1]}));
   return newDriver;
 }
 
 function attributesToPhrase(drivers) {
-  const newDriver = [];
-  for (const driver of drivers) {
-    let name = driver["name"];
-    let hometown = driver["hometown"];
-    let result = name + " is from " + hometown;
-    newDriver.push(result);
-  }
+  const newDriver = drivers.map(driver => `${driver.name} is from ${driver.hometown}`);
   return newDriver;
 }
