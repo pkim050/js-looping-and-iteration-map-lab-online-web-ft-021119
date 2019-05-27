@@ -2,8 +2,9 @@
 function map(array, callback) {
   const newArr = [];
   for (const element of array) {
-    callback(element);
+    newArr.push(callback(element));
   }
+  return newArr;
 }
 
 function lowerCaseDrivers(drivers) {
