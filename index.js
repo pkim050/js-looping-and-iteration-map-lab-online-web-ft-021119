@@ -23,7 +23,7 @@ function attributesToPhrase(drivers) {
   for (const driver of drivers) {
     let name = driver["name"];
     let hometown = driver["hometown"];
-    let result = `#{name} is from #{hometown}`;
+    let result = name + " is from " + hometown`;
     newDriver.push(result);
   }
   return newDriver;
