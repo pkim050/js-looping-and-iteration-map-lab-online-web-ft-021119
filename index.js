@@ -1,14 +1,6 @@
 // Code your solution in this file.
-function map(array, callback) {
-  const newArr = [];
-  for (const element of array) {
-    newArr.push(callback(element));
-  }
-  return newArr;
-}
-
 function lowerCaseDrivers(drivers) {
-  const newDriver = map(drivers, function(driver) {
+  const newDriver = drivers.map(function(driver) {
     return driver = driver.toLowerCase();
   });
 }
