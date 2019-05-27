@@ -4,15 +4,13 @@ function map(array, callback) {
   for (const element of array) {
     newArr.push(callback(element));
   }
-  console.log(newArr);
   return newArr;
 }
 
 function lowerCaseDrivers(drivers) {
   const newDriver = map(drivers, function(driver) {
-    driver.toLowerCase();
+    return driver = driver.toLowerCase();
   });
-  return newDriver;
 }
 
 function nameToAttributes(drivers) {
