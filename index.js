@@ -9,7 +9,7 @@ function map(array, callback) {
 
 function lowerCaseDrivers(drivers) {
   const newDriver = map(drivers, function(driver) {
-    console.log(driver);
+    console.log(driver.toLowerCase());
     return driver.toLowerCase();
   });
 }
